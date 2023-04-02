@@ -1,0 +1,461 @@
+/* Global */
+.section-title {
+  position: relative;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 60px 0;
+  padding: 0, 0, 0, 0;
+}
+
+.section-title::after {
+  position: absolute;
+  content: '';
+  bottom: -12px;
+  left: 50%;
+  width: 200px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: #1e272e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  background: #fff;
+  color: #3d3d3d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /*border: solid;
+  border-color: red;*/
+}
+
+section {
+  padding: 40px 0;
+  /*border: solid;
+  border-color: green;*/
+}
+
+.navigation {
+  background: none;
+  padding: 12px 0;
+  text-align: right;
+}
+
+/* nie działa ::after V - dlaczego? */
+.navigation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin: 0 36px 0 0;
+  position: relative;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+.navigation ul li:hover>a,
+.navigation ul li:focus-within>a {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: #8cb2ff;
+}
+
+.navigation ul ul {
+  display: none;
+}
+
+.navigation ul ul li {
+  display: block;
+  text-align: left;
+}
+
+.navigation li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.navigation ul ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  min-width: 100%;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+}
+
+.navigation ul ul li a:hover {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  min-width: 100%;
+  position: relative;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #8cb2ff;
+  margin: 0;
+}
+
+/* Splash */
+.splash {
+  height: 100vh;
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/12935748/pexels-photo-12935748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: top left;
+  background-size: cover;
+}
+
+.splash i {
+  font-size: 55px;
+  background: none;
+}
+
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.77);
+  padding: 2em;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #2d4370;
+  border-width: 1px;
+}
+
+.page-title {
+  color: #6699FF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin: 0, 0, 0, 0;
+  position: relative;
+}
+
+.page-title:after {
+  position: absolute;
+  content: '';
+  bottom: -20px;
+  left: 50%;
+  width: 500px;
+  height: 0.5px;
+  transform: translateX(-50%);
+  background: #fff;
+}
+
+.page-subtitle {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin: 48px 0 0 0;
+  position: relative;
+  font-size: 18px;
+  margin: 48px 0 0 0;
+}
+
+.page-subtitle2 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin: 0, 0, 0, 0;
+  position: relative;
+  font-size: 28px;
+}
+
+/* Intro */
+.intro {
+  background: #fff;
+}
+
+.intro p {
+  width: 80%;
+  margin: 0 auto;
+  padding: 48px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+/* About */
+.about {
+  background: #f0f0f0;
+}
+
+/* Skills */
+[class^="skill-"] {
+  position: relative;
+}
+
+.skill-image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border: solid;
+  border-width: 1px;
+  border-color: #2d4370;
+}
+
+.skill-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skill-right .skill-image {
+  right: 0;
+}
+
+.skill-right .skill-description {
+  padding: 36px 55% 36px 0;
+  text-align: right;
+}
+
+.skill-left .skill-description {
+  padding: 36px 0 36px 55%;
+  text-align: left;
+}
+
+/* Gallery */
+
+.text {
+  font-size: larger;
+  font-weight: bolder;
+  color: #4b6db1;
+}
+
+.gallery {
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background: #f0f0f0;
+
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #2d4370;
+  border-width: 1px;
+}
+
+.gallery-button {
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-variant: small-caps;
+  background-color: #4b6db1;
+  color: #fff;
+  padding: 10px 20px;
+  border: solid;
+  border-color: #1e272e;
+  border-width: 0.5px;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.gallery-button:hover {
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-variant: small-caps;
+  background-color: #2d4370;
+  color: #fff;
+  padding: 10px 20px;
+  border: solid;
+  border-color: #1e272e;
+  border-width: 0.5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.gallery .photo-container {
+  width: 506.4px;
+  position: relative;
+  margin: 0;
+}
+
+.gallery .photo-container img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery .photo-container .layer {
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, .7);
+  display: none;
+
+}
+
+.gallery .photo-container .layer .text {
+  text-align: center;
+  margin-top: 110px;
+}
+
+.gallery .photo-container:hover .layer {
+  display: block;
+}
+
+
+/* Contact */
+
+.contact {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*border: solid;
+  border-color: #4b6db1;*/
+}
+
+.contact2 {
+  width: 500px;
+  max-height: 250px;
+  margin-top: 100px;
+  padding-left: 50px;
+  text-align: left;
+  border: solid;
+  border-color: #1d1b87;
+}
+
+form {
+  width: 500px;
+  max-height: 335px;
+
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  max-height: 30px;
+  font-weight: normal;
+  background-color: #4b6db1;
+  color: #fff;
+  padding: 5px 20px;
+  border: solid;
+  border-color: #1e272e;
+  border-width: 0.5px;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+input[type="submit"]:hover {
+  max-height: 30px;
+  font-weight: normal;
+  background-color: #2d4370;
+  color: #fff;
+  padding: 5px 20px;
+  border: solid;
+  border-color: #1e272e;
+  border-width: 0.5px;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+/* Footer */
+.page-footer {
+  background: #f0f0f0;
+  max-height: 55px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.page-footer ul {
+  transform: translateX(18px);
+}
+
+.page-footer i {
+  color: black;
+  font-size: 20px;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease-out;
+  transform-origin: center;
+}
+
+.page-footer i:hover {
+  color: #2d4370;
+  transform: scale(1.5);
+}
